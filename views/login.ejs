@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>frank </title>
+   <!-- Favicons -->
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+<script src="assets/js/validacion.js"></script>
+
+<script src="javascripts/validacion.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+ // var socket = io();
+</script>
+
+<!-- Template Main CSS File -->
+<link href="assets/css/main.css" rel="stylesheet">
+  </head>
+  <body class="bg-primary text-white">
+  <main id="main">
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>LOGIN</h2>
+          <center>
+          <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Bienvenidos Frank Valverde</div>
+            <div class="card-body">
+                            
+                      <form method="POST" action="/login" >
+                        <div class="row" class="php-email-form">
+                          <div class="form-group mt-3">
+                            <input type="text" name="email" class="form-control"  placeholder="@" required>
+                          </div>
+                          <div class="form-group mt-3">
+                            <input type="password" class="form-control" name="password" placeholder="password" required>
+                          </div>
+                        </div><br>
+                        <div class="text-center">
+                          
+
+                          <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-outline-primary">LOGIN </button> <br>
+                            
+                            <a class="link-success" href="/resetpassword">+ Recuperar contraseña</a>
+
+                            <a class="btn btn-outline-success" href="/registrar">REGISTRAR</a>
+                          
+                        </div>
+                      </form>
+            </div>
+          </div>
+        </center>
+        </div>
+
+      </div>
+
+     
+      
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+<!-- Modal -->
+
+  
+
+    
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="406714549279-htbrjbihvust8d5mlinp3of8mokdmtji.apps.googleusercontent.com">
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  
+<script src="jquery-3.6.0.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    
+    import Swal from 'sweetalert2';
+
+    var p1 = document.getElementById("password");
+var p2 = document.getElementById("passwor");
+let buton=document.getElementById("button").disabled = true;
+let alert1 = document.getElementById("alert");
+
+p2.addEventListener('keyup', logKey);
+function logKey(){
+  
+alert1.innerHTML="";
+  if (p1.value == p2.value) {
+    alert("Deseas guardar Usuario");
+        alert1.innerHTML+='<div class="alert alert-success" role="alert">'+
+        'CORRECTO PASSWORD'+
+      '</div>'
+     let buton=document.getElementById("button").disabled = false;
+  } else {
+   
+ 
+    alert1.innerHTML+='<div class="alert alert-danger" role="alert">'+
+        'Contraseña incorrecta'+
+      '</div>'
+  }
+  console.log(p1.value)
+}
+
+  </script>
+
+  </body>
+</html>

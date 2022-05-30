@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank admin.</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets1/css/bootstrap.css">
+    
+<link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets1/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets1/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets1/css/app.css">
+    <link rel="shortcut icon" href="assets1/images/favicon.svg" type="image/x-icon">
+    <script src="https://cdn.socket.io/4.4.1/socket.io.esm.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    
+</head>
+
+
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+    <div class="sidebar-header">
+        <div class="d-flex justify-content-between">
+            <div class="logo">
+              <h1>Frank  f5ext</h1>
+            </div>
+            <div class="toggler">
+                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-menu">
+        <ul class="menu">
+            <li class="sidebar-title">Menu</li>
+            
+            <li
+                class="sidebar-item active ">
+                <a href="index.html" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Datos Usuario</span>
+                </a>
+            </li>
+            
+            <li
+                class="sidebar-item  has-sub">
+                <a href="#" class='sidebar-link'>
+                    <i class="bi bi-stack"></i>
+                    <span>Publicaciones</span>
+                </a>
+                <ul class="submenu ">
+                    <li class="submenu-item ">
+                        <a href="/anuncios">Crear Anuncio.</a>
+             </li>
+                   
+                </ul>
+            </li>
+            
+            <li
+                class="sidebar-item  has-sub">
+                <a href="#" class='sidebar-link'>
+                    <i class="bi bi-collection-fill"></i>
+                    <span>Chat</span>
+                </a>
+                <ul class="submenu ">
+                
+                    <li class="submenu-item ">
+                        <a href="/chat">Chat</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-title">Proyectos</li>
+            
+            <li
+                class="sidebar-item  ">
+                <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class='sidebar-link'>
+                    <i class="bi bi-cash"></i>
+                    <span>Contribucion</span>
+                </a>
+            </li>
+            <li>
+            <a href="/singout" class="btn btn-outline-primary">Cerrar session</a>
+        </li>
+            
+        </ul>
+    </div>
+    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+</div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+            
+<div class="page-heading">
+    <h3>Profile Chat</h3>
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">NOMBRE DE USUARIO</label>
+          <input type="text" class="form-control" id="usuario" aria-describedby="@usuario">
+          <div id="emailHelp" class="form-text">Digita el nombre para el chat.</div>
+        </div>
+        
+        <button type="submit" class="btn btn-success">Ingresar</button>
+      </form>
+</div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>www.f5ext.com</p>
+                    </div>
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets1/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets1/js/bootstrap.bundle.min.js"></script>
+    
+<script src="assets1/vendors/apexcharts/apexcharts.js"></script>
+<script src="assets1/js/pages/dashboard.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="javascripts//adelante.js"></script>
+    <script src="assets1/js/mazer.js"></script>
+</body>
+
+</html>

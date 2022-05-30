@@ -1,0 +1,28 @@
+{
+  "name": "libre",
+  "version": "1.0.0",
+  "description": "f5ext",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "franklim valverde",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.4",
+    "python-shell": "^3.0.1",
+    "socket.io": "^4.4.1",
+    "socket.io-client": "^4.1.1",
+    "sweetalert2": "^11.4.17",
+    "uuid4": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

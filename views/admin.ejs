@@ -1,0 +1,233 @@
+
+<!-- CSS only -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank admin.</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets1/css/bootstrap.css">
+    
+<link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="javascripts/eve.js"></script>
+    <link rel="stylesheet" href="assets1/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets1/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets1/css/app.css">
+    <link rel="shortcut icon" href="assets1/images/favicon.svg" type="image/x-icon">
+    
+    <script>
+        import Swal from 'sweetalert2/dist/sweetalert2.js'
+
+import 'sweetalert2/src/sweetalert2.scss'
+        function hola(){
+                 
+Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1500
+})
+        }
+        hola()
+    </script>
+</head>
+
+<body>
+
+
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+    <div class="sidebar-header">
+        <div class="d-flex justify-content-between">
+            <div class="logo">
+              <h1>Frank  f5ext</h1>
+            </div>
+            <div class="toggler">
+                <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-menu">
+        <ul class="menu">
+            <li class="sidebar-title">Menu</li>
+            
+           <!-- <li
+                class="sidebar-item active ">
+                <a href="index.html" class='sidebar-link'>
+                    <i class="bi bi-grid-fill"></i>
+                    <span>Datos Usuario</span>
+                </a>
+            </li>
+            
+            <li
+                class="sidebar-item  ">
+                <a href="/createpubli" class='sidebar-link'>
+                    <i class="bi bi-stack"></i>
+                    <span>Publicaciones</span>
+                </a>
+                
+            </li>-->
+            
+            <li class="sidebar-item ">
+                <a href="/adminChat" class='sidebar-link'>
+                    <i class="bi bi-collection-fill"></i>
+                    <span>Chat</span>
+                </a>
+                
+            </li>
+            
+          
+           <!-- <li class="sidebar-title">Proyectos</li>-->
+            
+           
+            
+            <li>
+            <a href="/singout" class="btn btn-outline-primary">Cerrar session</a>
+        </li>
+            
+        </ul>
+    </div>
+    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+</div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+            
+<div class="page-heading">
+    
+    <% us.forEach(function(use){ %>
+
+    <h3>Bienvenido Usuario <%= use.nombre %></h3>
+    
+    <%  }); %>
+</div>
+<div class="page-content">
+    <section class="row">
+        <div class="col-12 col-lg-9">
+            
+
+
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>PERFIL</h4>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a href="https://poki.com/es" >
+                                                <img src="https://www.movilzona.es/app/uploads/2018/10/juegos-android.jpg?x=810" alt="..." class="img-thumbnail">
+                                            <h5 class="card-title">Juegos </h5>
+                                            <p class="card-text">Disfruta nuevos juegos online de la mejor calidad</p>
+                                        </a>
+                                            <a href="https://poki.com/es" class="btn btn-primary">Visitar</a>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <img src="https://th.bing.com/th/id/OIP.t7sRc58aD6o2N4gBQicgjAHaD4?pid=ImgDet&rs=1" alt="..." class="img-thumbnail">
+                                            <h5 class="card-title">Pedidos</h5>
+                                            <p class="card-text">Hacer pedidos</p>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                Aqui
+                                              </button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-12 col-lg-3">
+            <div class="card">
+                <div class="card-body py-4 px-5">
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+</div>
+<!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <form action="/reserva" method="post">
+                     <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="correo" name="correo" placeholder="correo@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Celular</label>
+                                <input type="text" class="form-control" id="celular" name="celular" placeholder="Celular">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Escribe texto</label>
+                                <textarea class="form-control" id="comentario" rows="3" name="comentario"></textarea>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+                              </div>
+
+            </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>F5EXT MARCA FRANKLIM VALVERDE</p>
+                    </div>
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets1/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets1/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<!-- CSS only -->
+<script src="assets1/vendors/apexcharts/apexcharts.js"></script>
+<script src="assets1/js/pages/dashboard.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="406714549279-htbrjbihvust8d5mlinp3of8mokdmtji.apps.googleusercontent.com">
+
+    <script src="assets1/js/mazer.js"></script>
+</body>
+
+</html>

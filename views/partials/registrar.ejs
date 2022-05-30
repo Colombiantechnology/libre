@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>frank </title>
+   <!-- Favicons -->
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+
+  </head>
+  <body>
+    
+  
+    
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <div id="alert"></div>
+          <form action="/registrar" method="post"  enctype="multipart/form-data">
+            <div class="mb-3">
+              <input type="text" class="form-control" name="nombre" placeholder="NOMBRE">
+              
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" name="email" placeholder="@">
+             
+            </div>
+            <div class="mb-3">
+              <input type="celular" class="form-control" name="celular" placeholder="CELULAR">
+             
+            </div>
+  
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password"  onchange="logKey()" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control"  id="passwor" onchange="logKey()"  required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" id="button"  disabled>Registrar</button>
+          </form>
+        </div>
+        
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="alert"></div>
+            <form action="/registrar" method="post"  enctype="multipart/form-data">
+              <div class="mb-3">
+                <input type="text" class="form-control" name="nombre" placeholder="NOMBRE">
+                
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" name="email" placeholder="@">
+               
+              </div>
+              <div class="mb-3">
+                <input type="celular" class="form-control" name="celular" placeholder="CELULAR">
+               
+              </div>
+    
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password"  onchange="logKey()" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control"  id="passwor" onchange="logKey()"  required>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" id="button"  disabled>Registrar</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>www.f5ext.com</p>
+          </div>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </body>
+  <script>
+    import Swal from 'sweetalert2';
+
+    var p1 = document.getElementById("password");
+var p2 = document.getElementById("passwor");
+let buton=document.getElementById("button").disabled = true;
+let alert1 = document.getElementById("alert");
+
+p2.addEventListener('keyup', logKey);
+function logKey(){
+  
+alert1.innerHTML="";
+  if (p1.value == p2.value) {
+    alert("Deseas guardar Usuario");
+        alert1.innerHTML+='<div class="alert alert-success" role="alert">'+
+        'CORRECTO PASSWORD'+
+      '</div>';
+      
+     let buton=document.getElementById("button").disabled = false;
+  } else {
+  
+    alert1.innerHTML+='<div class="alert alert-danger" role="alert">'+
+        'Contraseña incorrecta'+
+      '</div>'
+  }
+  console.log(p1.value)
+}
+
+  </script>
+</html>
